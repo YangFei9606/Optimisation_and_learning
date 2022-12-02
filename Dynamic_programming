@@ -3,6 +3,7 @@ This file includes the learning notes of Dynamic Programming from Youtube video 
 
 December 2022
 
-Questions such as calculaye the 40th number of the fibonacci sequence and count the number of different ways to move through a 6x9 grid can all be categorised into the dynamic programming cluster.
+Questions such as calculaye the 40th number of the fibonacci sequence and count the number of different ways to move through a 6x9 grid can all be categorised 
+into the dynamic programming cluster. There are two main parts in dynamic programming, Memoization (记忆化) and Tabulation (列表化). 
 
 

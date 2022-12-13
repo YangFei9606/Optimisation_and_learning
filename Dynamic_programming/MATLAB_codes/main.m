@@ -33,6 +33,21 @@ dict_grid = dictionary(string([]),[]);
 
 reu
 
+%% Can-Sum problem
+% Given a target number and a list of possible choices. Suppose we can use an arbitrary number on "selections" for nonnegative times,
+% can we get the target number?
+clc
+clear
+target_num = 7;
+selections = [2,3,4,5,6];
+dict_can_sum = dictionary(double([]),boolean([]));
 
+if target_num == 0
+    reu = false;
+else
+    [reu, dict_can_sum] = can_sum_dp(target_num, selections, dict_can_sum);
+end
+
+reu
 
 

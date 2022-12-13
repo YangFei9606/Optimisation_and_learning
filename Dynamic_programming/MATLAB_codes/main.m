@@ -45,7 +45,7 @@ dict_can_sum = dictionary(double([]),boolean([]));
 if target_num == 0
     reu = false;
 else
-    [reu, dict_can_sum] = can_sum_dp(target_num, selections, dict_can_sum);
+    [reu, dict_can_sum] = can_sum_recursive(target_num, selections, dict_can_sum);
 end
 
 reu

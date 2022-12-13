@@ -1,4 +1,4 @@
-function [result, dictionary] = can_sum_dp(target, selections, dictionary)
+function [result, dictionary] = can_sum_recursive(target, selections, dictionary)
 
 if target == 0
     result = true;

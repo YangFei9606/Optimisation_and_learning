@@ -7,7 +7,6 @@ def can_construct_dp(target, wordbank, dict_can_construct):
         return dict_can_construct.get(target)
     else:
         temp_result = False
-        new_target = target
         for i in wordbank:
             if len(i)<=len(target):
                 temp_check = True
@@ -15,17 +14,25 @@ def can_construct_dp(target, wordbank, dict_can_construct):
                     if i[j] != target[j]:
                         temp_check = False
                         break
+                if temp_check is True:
+                    new_target = target[len(i):len(target)]
+                    temp_result = temp_result or can_construct_dp(new_target, wordbank, dict_can_construct)
 
-                new_target = target[len(i):len(target)]
-                dict_can_construct[target] = can_construct_dp(new_target, wordbank, dict_can_construct)
-                return dict_can_construct[target]
+            if temp_result is True:
+                dict_can_construct[target] = True
+                return True
 
         dict_can_construct[target] = False
         return dict_can_construct[target]
 
 
-wordBank = ['e','ee','eee','a','fe','fee']
+wordBank = ['e','ee','eee','a','feee']
 target = "aaaeeeeeeeeeeeeeeeeeeeeeeefefefee"
+
+# wordBank = ['a','p','ent','enter','ot','o','t']
+# target = "enterapotentpot"
+
+
 dict_can_construct = {}
 print(can_construct_dp(target, wordBank, dict_can_construct))
 print(dict_can_construct)

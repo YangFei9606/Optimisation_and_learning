@@ -16,17 +16,16 @@ def can_construct_dp(target, wordbank, dict_can_construct):
                         temp_check = False
                         break
 
-                if temp_check is True:
-                    new_target = target[len(i):len(target)]
-                    dict_can_construct[target] = can_construct_dp(new_target, wordbank, dict_can_construct)
-                    return dict_can_construct[target]
+                new_target = target[len(i):len(target)]
+                dict_can_construct[target] = can_construct_dp(new_target, wordbank, dict_can_construct)
+                return dict_can_construct[target]
 
         dict_can_construct[target] = False
         return dict_can_construct[target]
 
 
 wordBank = ['e','ee','eee','a','fe','fee']
-target = "aaaeeeeeeeeeeeeeeeeeeeeeeefefefeef"
+target = "aaaeeeeeeeeeeeeeeeeeeeeeeefefefee"
 dict_can_construct = {}
 print(can_construct_dp(target, wordBank, dict_can_construct))
 print(dict_can_construct)

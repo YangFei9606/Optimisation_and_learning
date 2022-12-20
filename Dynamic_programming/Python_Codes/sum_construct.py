@@ -16,7 +16,7 @@ def can_construct_dp(target, wordbank, dict_can_construct):
                         break
                 if temp_check is True:
                     new_target = target[len(i):len(target)]
-                    temp_result = temp_result + can_construct_dp(new_target, wordbank, dict_can_construct)
+                    temp_result += can_construct_dp(new_target, wordbank, dict_can_construct)
 
         dict_can_construct[target] = temp_result
         return dict_can_construct[target]

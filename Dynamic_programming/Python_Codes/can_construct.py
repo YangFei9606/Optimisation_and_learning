@@ -9,9 +9,9 @@ def can_construct_dp(target, wordbank, dict_can_construct):
         temp_result = False
         new_target = target
         for i in wordbank:
-            if i[0] == target[0] and len(i)<=len(target):
+            if len(i)<=len(target):
                 temp_check = True
-                for j in range(1,len(i)):
+                for j in range(0,len(i)):
                     if i[j] != target[j]:
                         temp_check = False
                         break

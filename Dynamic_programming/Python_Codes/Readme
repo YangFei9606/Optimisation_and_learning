@@ -1,2 +1,6 @@
 
 The python codes for the DP-based process are stored here. 
+
+2022.12.27
+For those that ends with "memo", they are based on memoisation only. 
+From some Leetcode examples, I see that using Memoisation only is not sufficient (multiple "Run Time Exceeds" happened).

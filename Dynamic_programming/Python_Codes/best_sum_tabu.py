@@ -11,6 +11,6 @@ def best_sum_tabu(target, numbers):
 
     return list_best[-1]
 
-target = 69
+target = 100
 numbers = [2, 50, 10]
 print(best_sum_tabu(target, numbers))

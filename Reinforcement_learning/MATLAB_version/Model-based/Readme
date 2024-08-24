@@ -1,0 +1,2 @@
+
+This folder contains the model-based RL algorithm for grid world. Parameters can be adjusted to switch from policy iteration, value iteration and truncated policy iteration.

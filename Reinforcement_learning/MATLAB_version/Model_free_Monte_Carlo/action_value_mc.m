@@ -42,7 +42,7 @@ for sample_temp = 1 : sample_num
         
     end
 
-    action_q = action_q + sample_reward/sample_temp;
+    action_q = action_q + sample_reward/sample_num;
 
 end
 
